@@ -1,0 +1,39 @@
+# -*- restclient -*-
+
+#
+# test post json
+POST http://localhost:3030/batches
+Content-Type: application/json
+
+{ "data": [1,2,3,4] }
+
+# octet-stream
+POST http://localhost:3030/batches
+Content-Type: application/octet-stream
+
+[1,2,3,4]
+
+# test post 2
+POST http://localhost:3030/batches
+Content-Type: application/json
+
+{
+        "jql": "project = HCPUB",
+        "startAt": 0,
+        "maxResults": 15,
+        "fields": [
+                "summary",
+                "status",
+                "assignee"
+        ]
+}
+
+
+# post to httpbin
+POST https://httpbin.org/post
+Content-Type: application/json
+
+# post to httpbin
+POST https://httpbin.org/post
+Content-Type: application/json
+
